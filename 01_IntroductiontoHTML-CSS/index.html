@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+the !DOCTYPE declaration is a preamble to the website, to essentially trigger the "Standards
+Mode" in browsers to ensure renders consistenly among different browsers; the <html> tag is the
+root element that wraps every element (except !DOCTYPE).
+-->
+<html lang="en">
+<!--
+ the <head> tags contain information that is usually not seen by the user
+who is browsing the page (apart from the title). it contains the metainformation
+and the inline style sheet of the html file.
+-->
+<head>
+    <!-- 
+    the <meta> tags contain machine-parsable/readable data such as character set, viewport, and
+    description.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <!--
+    the <style> tag contains the inline style sheet (that is seperate from an internal or external
+    style sheet). this is where you encode CSS styling.
+    -->
+    <style>
+        :root {
+            --primary-color: #a9b778;
+        }
+        body {
+            background-color: var(--primary-color);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .title {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        .title-desc {
+            font-style: italic;
+        }
+        img {
+            border-radius: 20px;
+            border: 1px solid black;
+        }
+        .ing-list {
+        position: relative;
+
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        padding-left: 25%;
+        padding-top: 5%;
+        }
+        .step-list {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 10%;
+        }
+        h2 {
+            font-style: italic;
+        }
+    </style>
+</head>
+<!-- 
+the <body> contains the main bulk of what will be shown to the user, such as text, graphics,
+multimedia, etc. this is where the data that will be stored is contained.
+-->
+<body>
+    <!--
+    the <center> tags center all elements contained; it is essentially the same as something like
+    content-align: center for CSS, but in an element form that can be controlled on what it is 
+    centering.
+    -->
+    <center>
+        <!-- Tags like <h1>, <h2>, etc provide a prespecified font size to use automatically apply -->
+        <h1 class="title"> Cacio e Pepe</h1>
+        <!-- the <p> tag is essentially a "paragraph" marker, to help seperate text data. -->
+        <p class="title-desc"> A Roman pasta dish that translates to “cheese and pepper”.<br>
+            The simple dish consists of spaghetti, black pepper and Pecorino Romano.</p>
+        <!--
+        the <br> tag is simply a "break line" tag, or something that seperates the lines together.
+        -->
+        <br>
+        <!--
+        the <img> tag is for inputting image files into html, where you can define the specfic
+        dimensions and other things about the image
+        -->
+        <img src = "image.png" style="width: auto; height: 300px;">
+    </center><br><br><br><br><br>
+    <!--
+    a <section> tag is a seperation using semantic elements (essentially a div with a fancy name)
+    to create a specific section for things like accessibility functions (ie. screen readers) to 
+    work properly.
+    -->
+    <section class="ing-list">
+        <h2> Ingredients:</h2>
+        <!-- the <ul> element defines an "unordered list", or a bulleted list-->
+        <ul>
+            <li> Water</li>
+            <li> Pecorino Romano</li>
+            <li> Unsalted Butter</li>
+            <li> Black Pepper</li>
+            <li> Salt</li>
+            <li> Pasta (like Bucatini)</li>
+        </ul>
+        <!-- the <b> and <i> tags are for giving the bold and italic property to the text inside, respectively -->
+        <p><b>Time to Make:</b> <i>15 mins.</i></p>
+    </section>
+    <section class="step-list">
+        <h2> Steps on how to Make:</h2>
+        <!-- like <ul>, <ol> or ordered list, makes a numbered list instead of bullet points-->
+            <ol> 
+                <li> Bring a large pot of water to a boil and generously season with salt. Add pasta and cook until al dente.</li>
+                <li> Reserve some pasta water and cool slightly.</li>
+                <li> Drain pasta in a colander.</li>
+                <li> Place skillet (or same pot used to cook pasta) over medium heat and add pasta back into pot.</li>
+                <li> Add reserved pasta water and butter.</li>
+                <li> Add grated cheese and black pepper and continue to toss together until sauce comes together and is smooth and creamy.</li>
+                <li> Top with more grated cheese and serve.</li>
+            </ol>
+    </section>
+</body>
+</html>
