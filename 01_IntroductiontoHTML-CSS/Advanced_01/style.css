@@ -1,0 +1,176 @@
+:root {
+    --cream: #f5f0e8;
+    --parchment: #ede5d0;
+    --ink: #1c1a16;
+    --ink-light: #4a4438;
+    --accent: #8b2e00;
+    --rule: #c9b99a;
+    --serif-display: 'Playfair Display', Georgia, serif;
+    --serif-body: 'Lora', 'Times New Roman', serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--parchment);
+    color: var(--ink);
+    font-family: var(--serif-body);
+    font-size: 17px;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+.page-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 32px 80px;
+}
+
+.recipe-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.origin-tag {
+    font-family: var(--serif-body);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+
+.title {
+    font-family: var(--serif-display);
+    font-weight: 700;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    line-height: 1.05;
+    color: var(--ink);
+    margin-bottom: 20px;
+}
+
+.title-desc {
+    font-family: var(--serif-body);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-light);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
+.hero-image-wrap {
+    margin: 0 -16px 52px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image-wrap img {
+    width: 100%;
+    max-width: 680px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+    display: block;
+}
+
+.recipe-body {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 48px;
+    align-items: start;
+}
+
+h2 {
+    font-family: var(--serif-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--ink);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+}
+
+.ing-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ing-list ul li {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.95rem;
+    color: var(--ink);
+}
+
+.ing-list ul li:last-child {
+    border-bottom: none;
+}
+
+.note {
+    display: block;
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    margin-top: 2px;
+}
+
+.time-badge {
+    margin-top: 24px;
+    font-size: 0.875rem;
+    color: var(--ink-light);
+    padding: 10px 14px;
+    background-color: var(--cream);
+    border-left: 3px solid var(--accent);
+}
+
+.step-list ol {
+    padding: 0;
+    list-style: none;
+    counter-reset: steps;
+}
+
+.step-list ol li {
+    counter-increment: steps;
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    align-items: start;
+}
+
+.step-list ol li:last-child {
+    border-bottom: none;
+}
+
+.step-list ol li::before {
+    content: counter(steps);
+    font-family: var(--serif-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent);
+    line-height: 1.4;
+}
+
+@media (max-width: 580px) {
+    .recipe-body {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image-wrap img {
+        height: 220px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}
