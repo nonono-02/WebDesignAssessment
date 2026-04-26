@@ -1,0 +1,26 @@
+/* Purple border with a red drop shadow */
+#A {
+  border-color: blueviolet;
+  box-shadow: 12px 12px 20px red;
+}
+
+/* Bright green border with an inner black drop shadow */
+#B {
+  border-color: lime;
+  box-shadow: inset 15px 15px 25px black;
+}
+
+/* Rounded corners with multiple solid box-shadow rings */
+#C {
+  border-color: orange;
+  border-radius: 40px;
+  box-shadow: 0 0 0 10px blue,
+              0 0 0 20px red,
+              0 0 0 30px green;
+}
+
+/* Brown border with a shadow applied to the text itself */
+#D {
+  border-color: firebrick;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
+}

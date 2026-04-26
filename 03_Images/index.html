@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Serene Productivity</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f3ede7;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      margin: 0;
+      color: #3b3329;
+    }
+
+    .container {
+      max-width: 1280px;
+      width: 100%;
+      background: #fefcf8;
+      border-radius: 2rem;
+      padding: 2.5rem 2rem 2.2rem;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.05), 0 8px 18px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e7dbcd;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 2.8rem;
+    }
+
+    h1 {
+      font-weight: 480;
+      font-size: 2.4rem;
+      letter-spacing: -0.4px;
+      color: #4e4030;
+      text-transform: lowercase;
+      word-spacing: 2px;
+    }
+
+    .header-line {
+      width: 90px;
+      height: 2px;
+      background: #cfbc9f;
+      margin: 0.8rem auto 1rem;
+      opacity: 0.7;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      font-weight: 350;
+      color: #6f6150;
+      letter-spacing: 0.2px;
+      text-transform: lowercase;
+      border-bottom: 1px solid #e2d4c0;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 2.2rem;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .card {
+      flex: 1 1 280px;
+      min-width: 260px;
+      max-width: 370px;
+      background: #ffffff;
+      border-radius: 1.8rem;
+      padding: 1rem 1rem 1.4rem;
+      box-shadow: 0 12px 22px -8px rgba(80, 60, 40, 0.1);
+      transition: transform 0.25s ease, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #efe3d4;
+      background: #fffdf9;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 32px -12px rgba(70, 50, 30, 0.18);
+      border-color: #dacbb5;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1.4rem;
+      display: block;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      transition: filter 0.3s ease;
+      filter: sepia(0.14) contrast(1.04) brightness(0.99) saturate(0.88) hue-rotate(-2deg);
+    }
+
+    .card:hover img {
+      filter: sepia(0.08) contrast(1.02) brightness(1.01) saturate(0.96) hue-rotate(0deg);
+    }
+
+    .image-details {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 0 0.2rem;
+    }
+
+    .image-title {
+      font-weight: 520;
+      font-size: 1.05rem;
+      color: #4d3e2f;
+      letter-spacing: -0.2px;
+      text-transform: lowercase;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .license-tag {
+      font-size: 0.78rem;
+      background: #f7f1e8;
+      color: #5f4e38;
+      padding: 0.4rem 0.9rem;
+      border-radius: 2rem;
+      margin-top: 0.6rem;
+      display: inline-block;
+      font-weight: 450;
+      letter-spacing: 0.2px;
+      border: 1px solid #e4d3bd;
+      line-height: 1.4;
+    }
+
+    .license-tag a {
+      color: #5f4e38;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      font-weight: 480;
+      text-decoration-thickness: 0.8px;
+    }
+
+    .footnote {
+      margin-top: 2.8rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #7c6e5c;
+      background: #f9f4eb;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0.45rem 2rem;
+      border-radius: 3rem;
+      border: 1px solid #e0cfb7;
+      letter-spacing: 0.2px;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .container {
+        padding: 1.8rem 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>serene productivity</h1>
+      <div class="header-line"></div>
+      <div class="subhead">calm focus · natural textures · mindful workspace</div>
+    </div>
+
+    <div class="gallery">
+      <div class="card">
+        <img
+          src="https://images.pexels.com/photos/4050387/pexels-photo-4050387.jpeg?auto=compress&cs=tinysrgb&w=600&h=400"
+          alt="Clean white desk with open notebook, small potted plant, and a ceramic cup, bathed in soft natural light"
+          width="600"
+          height="400"
+          title="Minimal morning workspace – notebook, plant & calm"
+        />
+        <div class="image-details">
+          <div class="image-title">mindful notes</div>
+          <div class="license-tag">
+            Pexels license · 
+            <a href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer">free for commercial use</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://images.pexels.com/photos/5828469/pexels-photo-5828469.jpeg?auto=compress&cs=tinysrgb&w=600&h=400"
+          alt="Person holding a warm creamy ceramic mug with both hands, wearing a beige knitted sweater, cozy morning vibe"
+          width="600"
+          height="400"
+          title="Warm cup moments – slow morning ritual"
+        />
+        <div class="image-details">
+          <div class="image-title">warm pause</div>
+          <div class="license-tag">
+            Pexels license · 
+            <a href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer">commercial use allowed</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://images.pexels.com/photos/4050319/pexels-photo-4050319.jpeg?auto=compress&cs=tinysrgb&w=600&h=400"
+          alt="Open hardcover book with dried flowers and reading glasses resting on pages, soft linen background"
+          width="600"
+          height="400"
+          title="Quiet reading nook – dried blossoms & spectacles"
+        />
+        <div class="image-details">
+          <div class="image-title">pressed thoughts</div>
+          <div class="license-tag">
+            Pexels license · 
+            <a href="https://www.pexels.com/license/" target="_blank" rel="noopener noreferrer">no attribution required</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footnote">
+      all images under 300KB, original aspect ratio retained, subtle warm filter applied
+    </div>
+  </div>
+</body>
+</html>
