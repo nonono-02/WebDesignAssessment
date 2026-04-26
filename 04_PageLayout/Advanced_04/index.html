@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Creative Computing: Web Development</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section class="column progress-section">
+            <h2>Current Progress</h2>
+            <div class="progress-card">
+                <p>Overall Module Completion</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%;"></div>
+                </div>
+                <span>65%</span>
+            </div>
+            <button class="btn-primary">Update Progress</button>
+        </section>
+
+        <section class="column tasks-section">
+            <h2>Upcoming Tasks</h2>
+            <article class="task-item">
+                <h3>HTML Semantic Structure</h3>
+                <p>Review sectioning tags and accessibility.</p>
+                <span class="tag high">High Priority</span>
+            </article>
+
+            <article class="task-item">
+                <h3>CSS Flexbox Layouts</h3>
+                <p>Complete the exercise on responsive containers.</p>
+                <span class="tag medium">Medium Priority</span>
+            </article>
+
+            <article class="task-item">
+                <h3>Box Model Mastery</h3>
+                <p>Practice padding, border, and margin calculations.</p>
+                <span class="tag medium">Medium Priority</span>
+            </article>
+
+            <article class="task-item">
+                <h3>JavaScript Fundamentals</h3>
+                <p>Introduction to variables and functions.</p>
+                <span class="tag low">Low Priority</span>
+            </article>
+
+            <article class="task-item">
+                <h3>Portfolio Setup</h3>
+                <p>Initialize Github repository for final project.</p>
+                <span class="tag high">High Priority</span>
+            </article>
+        </section>
+
+        <aside class="column resource-section">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">MDN Web Docs</a></li>
+                <li><a href="#">W3 Schools CSS Guide</a></li>
+                <li><a href="#">CSS Tricks - Flexbox</a></li>
+                <li><a href="#">Lecture Notes Week 4</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Creative Computing Student Planner</p>
+    </footer>
+
+</body>
+</html>
