@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Partridge Advanced Soundboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">🐟 PSYCHEDELIC FISH</div>
+            <div class="tts-card">
+                <textarea id="tts-input" placeholder="Type Here"></textarea>
+                <button id="speak-btn">Say it</button>
+            </div>
+        </aside>
+
+        <main class="sampler">
+            <div class="bank-indicator">
+                <h2 id="bank-label">Sample Bank 1</h2>
+            </div>
+
+            <div id="grid-container" class="sound-grid"></div>
+
+            <footer class="pagination">
+                <button id="prev-page" class="nav-btn">⬅</button>
+                <button id="next-page" class="nav-btn">➡</button>
+            </footer>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
