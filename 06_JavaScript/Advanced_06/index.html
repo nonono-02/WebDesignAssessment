@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RGB — Colour Lab</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-logo">RGB <span class="header-logo-dot"></span> LAB</div>
+    <div class="lives-container" id="livesContainer"></div>
+  </header>
+
+  <main class="game-wrapper">
+
+    <div class="score-bar">
+      <span class="score-label">SCORE</span>
+      <span class="score-value" id="scoreValue">0</span>
+    </div>
+
+    <section class="prompt-section" id="promptSection">
+      <p class="prompt-instruction">Match this colour</p>
+      <div class="rgb-display" id="rgbDisplay">
+      </div>
+    </section>
+
+    <section class="swatches-section" id="swatchesSection">
+    </section>
+
+    <div class="feedback" id="feedback"></div>
+
+  </main>
+
+  <div class="overlay hidden" id="overlay">
+    <div class="overlay-card">
+      <div class="overlay-label" id="overlayLabel">GAME OVER</div>
+      <div class="overlay-final-score" id="overlayScore">0</div>
+      <p class="overlay-caption">points scored</p>
+      <button class="replay-btn" id="replayBtn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
