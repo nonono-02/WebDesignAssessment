@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS Quick Reference</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      color: #1c1c1c;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+      padding: 2rem 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      body {
+        padding: 3rem 2rem;
+      }
+      .container {
+        padding: 2.5rem 2rem;
+      }
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      border-bottom: 2px solid #e7e5e4;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      padding-left: 0;
+      border-left: 4px solid #d6d3d1;
+      padding-left: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-top: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #2c2c2c;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #3f3f3f;
+    }
+
+    code {
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+      background: #f4f4f2;
+      padding: 0.2rem 0.4rem;
+      border-radius: 8px;
+      font-size: 0.85em;
+      color: #b45309;
+    }
+
+    pre {
+      background: #1e1e1c;
+      color: #e4e4e1;
+      padding: 1rem;
+      border-radius: 16px;
+      overflow-x: auto;
+      margin: 1rem 0 1.25rem 0;
+      font-size: 0.85rem;
+      line-height: 1.45;
+    }
+
+    pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+      font-size: 0.85rem;
+    }
+
+    hr {
+      margin: 2rem 0;
+      border: none;
+      border-top: 1px solid #e9e9e6;
+    }
+
+    .tag-demo {
+      background: #fefcf7;
+      border: 1px solid #ece9e4;
+      border-radius: 18px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0 1.2rem 0;
+    }
+
+    .demo-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+      color: #8b7f76;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      text-align: center;
+      color: #a3a19c;
+      border-top: 1px solid #ece8e2;
+      padding-top: 1.5rem;
+    }
+
+    a {
+      color: #4a5b3e;
+      text-decoration: none;
+      border-bottom: 1px solid #cdcbc6;
+    }
+
+    a:hover {
+      color: #2b3622;
+      border-bottom-color: #4a5b3e;
+    }
+
+    .note {
+      background: #f8f7f4;
+      padding: 0.75rem 1rem;
+      border-radius: 14px;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: #5a554c;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>HTML & CSS Quick Reference</h1>
+  <p>A concise guide covering core tags and properties used in modern web projects — clean examples, no clutter.</p>
+
+  <h2>Document foundation</h2>
+  <h3>&lt;!DOCTYPE&gt; and &lt;html&gt;</h3>
+  <p><code>&lt;!DOCTYPE html&gt;</code> activates modern HTML5 standards. The <code>&lt;html lang="en"&gt;</code> root wraps all content.</p>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <h3>&lt;head&gt; &amp; &lt;body&gt;</h3>
+  <p><code>&lt;head&gt;</code> holds meta-information, <code>&lt;title&gt;</code>, and linked styles. <code>&lt;body&gt;</code> contains visible content.</p>
+  <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Page title&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Visible content&lt;/h1&gt;
+&lt;/body&gt;</code></pre>
+
+  <h3>&lt;meta&gt; tags</h3>
+  <p>Essential for responsiveness and character encoding.</p>
+  <pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content="Quick reference guide"&gt;</code></pre>
+
+  <h2>Text & content</h2>
+  <h3>Headings & paragraphs</h3>
+  <pre><code>&lt;h1&gt;Main title&lt;/h1&gt;
+&lt;h2&gt;Section heading&lt;/h2&gt;
+&lt;h3&gt;Sub-section&lt;/h3&gt;
+&lt;p&gt;This is a paragraph with regular text.&lt;/p&gt;</code></pre>
+
+  <div class="tag-demo">
+    <div class="demo-label">visual example</div>
+    <h1 style="font-size: 1.6rem; margin:0 0 0.25rem 0;">Heading 1</h1>
+    <h2 style="font-size:1.3rem; margin:0.3rem 0;">Heading 2</h2>
+    <p style="margin:0.5rem 0 0 0;">A paragraph flows naturally. <strong>Important</strong> and <em>emphasised</em> text blend in.</p>
+  </div>
+
+  <h3>Inline text: &lt;b&gt;, &lt;i&gt;, &lt;strong&gt;, &lt;em&gt;</h3>
+  <pre><code>&lt;p&gt;
+  &lt;b&gt;Bold&lt;/b&gt;, &lt;i&gt;italic&lt;/i&gt;,
+  &lt;strong&gt;semantic importance&lt;/strong&gt;,
+  &lt;em&gt;emphasised&lt;/em&gt;.
+&lt;/p&gt;</code></pre>
+
+  <h3>Line break &lt;br&gt; and deprecated &lt;center&gt;</h3>
+  <pre><code>&lt;p&gt;Line one&lt;br&gt;Line two&lt;/p&gt;
+&lt;!-- modern centering: --&gt;
+&lt;p style="text-align: center;"&gt;centered text&lt;/p&gt;</code></pre>
+
+  <h3>&lt;code&gt; and &lt;pre&gt;</h3>
+  <p>Inline <code>code snippet</code> and preformatted blocks preserve spacing.</p>
+  <pre><code>&lt;pre&gt;&lt;code&gt;
+.element {
+  display: flex;
+  gap: 1rem;
+}
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+  <h2>Links & media</h2>
+  <h3>Anchor &lt;a&gt;</h3>
+  <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit site&lt;/a&gt;
+&lt;a href="#section-id"&gt;Jump to section&lt;/a&gt;</code></pre>
+  <div class="tag-demo">
+    <div class="demo-label">live example</div>
+    <a href="#" style="border-bottom:1px solid #ccc;">Example link (placeholder)</a>
+  </div>
+
+  <h3>Image &lt;img&gt;</h3>
+  <pre><code>&lt;img src="photo.jpg" alt="Description" width="400"&gt;
+&lt;img src="image.svg" alt="responsive" style="width:100%; height:auto;"&gt;</code></pre>
+
+  <h2>Lists</h2>
+  <pre><code>&lt;ul&gt;
+  &lt;li&gt;Unordered item&lt;/li&gt;
+  &lt;li&gt;Another item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First step&lt;/li&gt;
+  &lt;li&gt;Second step&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+  <div class="tag-demo">
+    <div class="demo-label">list example</div>
+    <ul style="margin:0 0 0 1.2rem;">
+      <li>Fresh basil</li>
+      <li>Pine nuts</li>
+    </ul>
+    <ol style="margin:0.5rem 0 0 1.2rem;">
+      <li>Toast nuts lightly</li>
+      <li>Blend with garlic</li>
+    </ol>
+  </div>
+
+  <h2>Grouping elements</h2>
+  <h3>&lt;div&gt; and semantic tags</h3>
+  <pre><code>&lt;div class="card"&gt;
+  &lt;p&gt;Grouped block&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;header&gt;Navigation / logo&lt;/header&gt;
+&lt;main&gt;
+  &lt;section&gt;Thematic group&lt;/section&gt;
+  &lt;aside&gt;Sidebar&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;Footer info&lt;/footer&gt;</code></pre>
+
+  <h3>&lt;span&gt; — inline container</h3>
+  <pre><code>&lt;p&gt;Price: &lt;span style="font-weight:600;"&gt;$24.99&lt;/span&gt;&lt;/p&gt;</code></pre>
+
+  <h2>CSS basics</h2>
+  <h3>Selectors</h3>
+  <pre><code>/* element selector */
+p { color: navy; }
+/* class selector */
+.card { background: white; padding: 1rem; }
+/* id selector */
+#header { font-size: 2rem; }</code></pre>
+
+  <h3>Box model & box-sizing</h3>
+  <pre><code>.box {
+  width: 200px;
+  padding: 16px;
+  border: 2px solid #ccc;
+  margin: 24px;
+  box-sizing: border-box;
+}</code></pre>
+
+  <h3>Colors & typography</h3>
+  <pre><code>body {
+  color: #1e1e1e;
+  background-color: hsl(40, 20%, 97%);
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}</code></pre>
+
+  <h3>Layout: display (flex & grid)</h3>
+  <pre><code>.flex-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.grid-three {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}</code></pre>
+
+  <h3>CSS Custom Properties (variables)</h3>
+  <pre><code>:root {
+  --primary: #7f8c5e;
+  --spacing: 1rem;
+}
+.card {
+  background: var(--primary);
+  padding: var(--spacing);
+}</code></pre>
+
+  <h3>External stylesheets</h3>
+  <pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</code></pre>
+
+  <hr>
+
+  <h2>Quick syntax reminders</h2>
+  <pre><code>&lt;!-- comment in HTML --&gt;
+/* comment in CSS */
+
+&lt;div class="container"&gt;
+  &lt;p&gt;block with padding and margin&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+  <div class="note">
+    <strong>Note:</strong> Always use semantic elements when possible, and prefer CSS over deprecated tags like <code>&lt;center&gt;</code>. The box model with <code>box-sizing: border-box</code> makes layouts predictable.
+  </div>
+</div>
+</body>
+</html>
